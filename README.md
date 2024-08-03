@@ -1,3 +1,3 @@
 # Library
 
-Library project for The Odin Project.
+[Library project](https://mgriskus.github.io/library/) for The Odin Project.
