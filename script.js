@@ -1,9 +1,11 @@
-function Book(title, author, pages, read, id) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read;
-    this.id = id;
+class Book {
+    constructor(title, author, pages, read, id) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read;
+        this.id = id;
+    }
 }
 
 const myLibrary = [];
@@ -63,7 +65,7 @@ function createNewCard(book) {
         book.read = !book.read;
         readStatusButton.textContent = (book.read ? "Read" : "Unread");
         newCard.querySelector(".book-read").textContent = (book.read ? "Not read yet" : "Read");
-    })
+    });
     return newCard;
 }
 
@@ -71,13 +73,13 @@ function displayBook(book) {
     bookContainer.append(createNewCard(book));
 }
 
-function addBookToLibrary(book) { 
+function addBookToLibrary(book) {
     myLibrary.push(book);
     displayBook(book);
 }
 
 function displayBooks() {
-    for (let book of myLibrary) { 
+    for (let book of myLibrary) {
         displayBook(book);
     }
 }
