@@ -6,10 +6,6 @@ function Book(title, author, pages, read, id) {
     this.id = id;
 }
 
-Book.prototype.info = function() {
-    return this.title + " by " + this.author + ", " + this.pages + " pages, " + (this.read ? "not read yet" : "read");
-}
-
 const myLibrary = [];
 
 const bookContainer = document.querySelector(".book-container");
